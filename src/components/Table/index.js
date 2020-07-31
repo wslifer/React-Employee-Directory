@@ -1,5 +1,7 @@
 import React from "react";
 import Search from "../Search/index";
+import TableContents from "../TableContents/index";
+import TableColumns from "../TableColumns/index";
 
 function Table({
   toDisplay,
@@ -13,7 +15,10 @@ function Table({
         handleFormSubmit={handleFormSubmit}
         handleInputChange={handleInputChange}
       />
-      <div className="table"></div>
+      <div className="table">
+        <TableColumns handleButtonClick={handleButtonClick} />
+        <TableContents toDisplay={toDisplay} />
+      </div>
     </main>
   );
 }
