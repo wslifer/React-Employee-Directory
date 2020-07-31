@@ -11,7 +11,7 @@ function Search({ handleFromSubmit, handleInputChange, search }) {
         type="text"
         placeholder="John Doe"
       ></input>
-      <button type="submit" onClick={handleFormSubmit} className="submitBtn">
+      <button type="submit" className="submitBtn">
         Search
       </button>
     </form>

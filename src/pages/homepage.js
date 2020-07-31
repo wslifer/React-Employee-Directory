@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/Api";
+import Header from "../components/Header/index";
+import Table from "../components/Table/index";
 
 class Homepage extends Component {
   state = {

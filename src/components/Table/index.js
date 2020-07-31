@@ -17,3 +17,5 @@ function Table({
     </main>
   );
 }
+
+export default Table;
