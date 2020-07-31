@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import API from "../utils/Api";
 import Header from "../components/Header/index";
 import Table from "../components/Table/index";
+import API from "../utils/Api";
 
 class Homepage extends Component {
   state = {
@@ -10,17 +10,22 @@ class Homepage extends Component {
     toDisplay: [],
     sort: "none",
   };
+
   handleInputChange = (e) => {
     this.setState({ search: e.target.value });
   };
+
   componentDidMount() {
-    API.getUsers().then(({ data }) => {
-      this.setState({
-        users: data.results,
-        toDisplay: data.results,
-      });
-    });
+    API.getUsers()
+      .then(({ data }) => {
+        this.setState({
+          users: data.results,
+          toDisplay: data.results,
+        });
+      })
+      .catch((err) => console.log(err));
   }
+
   handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -34,6 +39,7 @@ class Homepage extends Component {
       ),
     });
   };
+
   handleButtonClick = () => {
     if (this.state.sort === "none" || this.state.sort === "down") {
       this.setState({
@@ -47,6 +53,7 @@ class Homepage extends Component {
       });
     }
   };
+
   render() {
     return (
       <div>

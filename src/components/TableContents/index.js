@@ -10,6 +10,15 @@ function TableContents({ toDisplay }) {
         <li className="table-contents">{user.phone}</li>
       </ul>
     ));
+  } else {
+    return (
+      <ul className="table-rows">
+        <li className="table-contents"></li>
+        <li className="table-contents"></li>
+        <li className="table-contents"></li>
+        <li className="table-contents"></li>
+      </ul>
+    );
   }
 }
 
