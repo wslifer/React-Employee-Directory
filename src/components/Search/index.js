@@ -1,9 +1,12 @@
 import React from "react";
+import "./style.css";
 
 function Search({ handleFromSubmit, handleInputChange, search }) {
   return (
-    <form className="search">
-      <label htmlFor="name>">Search by employee name</label>
+    <form className="form-group">
+      <label className="searchName" htmlFor="name">
+        Search by employee name
+      </label>
       <input
         value={search}
         onChange={handleInputChange}
