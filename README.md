@@ -17,7 +17,21 @@ This app allows a person to keep track of all of their employees information.
 
 ## Installation
 
-Install via npm i. Then run npm start.
+Install via
+
+```
+npm i
+```
+
+Then run
+
+```
+npm start
+```
+
+## Deployed Application
+
+https://wslifer.github.io/React-Employee-Directory/
 
 ## Usage
 
