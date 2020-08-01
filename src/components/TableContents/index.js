@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function TableContents({ toDisplay }) {
   if (toDisplay[0]) {
